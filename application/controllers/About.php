@@ -11,13 +11,13 @@
  *
  * @author Paul
  */
-class Golf extends Application {
+class About extends Application {
     //put your code here
     function __construct(){
         parent::__construct();
     }
     
     public function index() {
-    $this->show(6);
+    $this->show(3);
     }
 }

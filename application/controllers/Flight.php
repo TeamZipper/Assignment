@@ -11,9 +11,9 @@
  *
  * @author Paul
  */
-class Charlie extends Application {
+class Flight extends Application {
     //put your code here
-    public function brown() {
-    $this->show(3);
+    public function index() {
+    $this->show(2);
     }
 }
