@@ -7,16 +7,12 @@
  */
 
 /**
- * Description of Golf
+ * Description of About
  *
  * @author Paul
  */
 class About extends Application {
     //put your code here
-    function __construct(){
-        parent::__construct();
-    }
-    
     public function index() {
     $this->show(3);
     }
