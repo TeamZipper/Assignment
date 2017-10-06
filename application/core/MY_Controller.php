@@ -26,7 +26,7 @@ class Application extends CI_Controller
 		$this->data = array();
 
 		// Set default page title
-		$this->data['pagetitle'] = 'Quotes CMS';
+		$this->data['pagetitle'] = 'Zippers Airline';
 
 		// if in development mode, show the CodeIgniter version
 		$this->data['ci_version'] = (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '';
@@ -62,12 +62,11 @@ class Application extends CI_Controller
 		$this->data['pagebody'] = 'plane';
 
 		// build the list of planes, to pass on to our view
-		$source = $this->quotes->get($key);
+                $source = $this->quotes->get($key);
 
 		// pass on the data to present, adding the author record's fields
 		$this->data = array_merge($this->data, (array) $source);
 
 		$this->render();
 	}
-
 }
