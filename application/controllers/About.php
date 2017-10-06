@@ -11,7 +11,7 @@
  *
  * @author Paul
  */
-class About {
+class About extends Application {
     //put your code here
     public function index() {
     $this->show(3);
