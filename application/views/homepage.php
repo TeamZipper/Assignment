@@ -1,9 +1,7 @@
 <div class="row">
-    {authors}
 	<div class="span4">
-		<a href="/welcome/show/{key}">
-			<img src="/pix/{who}.jpg" title="{who} plays {role}"/>
-		</a>
+            <p># of planes: </p>
+            <p># flights: </p>
+                 airports we goto: none
 	</div>
-    {/authors}
 </div>
