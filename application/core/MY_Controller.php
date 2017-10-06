@@ -59,15 +59,14 @@ class Application extends CI_Controller
 	public function show($key)
 	{
 		// this is the view we want shown
-		$this->data['pagebody'] = 'actor';
+		$this->data['pagebody'] = 'plane';
 
-		// build the list of authors, to pass on to our view
-		$source = $this->quotes->get($key);
+		// build the list of planes, to pass on to our view
+                $source = $this->quotes->get($key);
 
 		// pass on the data to present, adding the author record's fields
 		$this->data = array_merge($this->data, (array) $source);
 
 		$this->render();
 	}
-
 }
