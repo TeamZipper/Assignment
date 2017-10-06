@@ -1,34 +1,33 @@
 <?php
 
-/**
- * This is a "CMS" model for Fleet, but with bogus hard-coded data,
- * so that we don't have to worry about any database setup.
- * This would be considered a "mock database" model.
- *
- * @author jim & andrew
- */
-class FleetData extends CI_Model
+class FlightsData extends CI_Model
 {
 	// expressed using long-form array notaiton in case students use PHP 5.x
 	var $data = array(
-		'1' => array("id"           => "avanti",
-                             "manufacturer" => "Piaggo",
-                             "model"        => "Avanti II",
-                             "price"        => "7195",
-                             "seats"        => "8",
-                             "reach"        => "2797",
-                             "cruise"       => "589",
-                             "takeoff"      => "994",
-                             "hourly"       => "977"),
-		'2' => array("id"           => "mustang",
-                             "manufacturer" => "Cessna",
-                             "model"        => "Citation Mustang",
-                             "price"        => "2770",
-                             "seats"        => "4",
-                             "reach"        => "2130",
-                             "cruise"       => "630",
-                             "takeoff"      => "950",
-                             "hourly"       => "1015")
+        '1' => array("flight" => "3U8502",
+                    "scheduled" => "11:25",
+                    "estimated" => "12:56",
+                    "airline" => "Sichuan Airlines",
+                    "to" => "chengdu",
+                    "terminal" => "Main",
+                    "gate" => "D53",
+                    "status" => "Departed"),
+        '2' => array("flight" => "WS180",
+                    "scheduled" => "12:30",
+                    "estimated" => "12:45",
+                    "airline" => "WestJet Airlines",
+                    "to" => "Edmonton",
+                    "terminal" => "Main",
+                    "gate" => "B27",
+                    "status" => "Final Call"),
+        '3' => array("flight" => "AC114",
+                    "scheduled" => "13:00",
+                    "estimated" => "",
+                    "airline" => "Air Canada",
+                    "to" => "Toronto",
+                    "terminal" => "Main",
+                    "gate" => "C44",
+                    "status" => "Boarding")
 	);
 
 	// Constructor
