@@ -16,4 +16,12 @@ class About extends Application {
     public function index() {
     $this->show(3);
     }
+    
+    	public function show($key)
+	{
+		// this is the view we want shown
+		$this->data['pagebody'] = 'about';
+
+		$this->render();
+	}
 }
