@@ -14,6 +14,6 @@
 class About {
     //put your code here
     public function index() {
-    $this->show();
+    $this->show(3);
     }
 }
