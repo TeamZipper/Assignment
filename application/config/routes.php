@@ -54,3 +54,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['fleet'] = 'fleet';
 $route['flights'] = 'flights';
+$route['info'] = 'info';
