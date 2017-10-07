@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Flights extends Application
+class Info extends Application
 {
 
     function __construct()
@@ -15,7 +15,7 @@ class Flights extends Application
     public function index()
     {
         // this is the view we want shown
-        $this->data['pagebody'] = 'flights';
+        $this->data['pagebody'] = 'info';
 
         // build the list of planes, to pass on to our view
         $source = $this->flightsdata->all();
