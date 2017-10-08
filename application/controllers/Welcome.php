@@ -16,9 +16,15 @@ class Welcome extends Application {
         $this->data['pagebody'] = 'homepage';
 
         // build the list of planes, to pass on to our view
+        $source = $this->fleetdata->all();
+           
+         // pass on the data to present, as the "plnaes" view parameter
+        $this->data['planes'] = $source;
+        
+        // build the list of flights, to pass on to our view
         $source = $this->flightsdata->all();
 
-        // pass on the data to present, as the "planes" view parameter
+        // pass on the data to present, as the "airlines" view parameter
         $this->data['airlines'] = $source;
 
         $this->render();
