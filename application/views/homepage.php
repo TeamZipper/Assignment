@@ -1,9 +1,15 @@
 <div class="row">
 	<div class="span4">
-            {planes}
-            <p># of planes: </p>
-            {/planes}
-            <p># flights: </p>
+            
+            <p>
+                # of planes: 
+              <?php echo  count($planes); ?>
+            </p>
+            
+            <p>
+                # flights:
+                <?php echo  count($airlines); ?>
+            </p>
              airports we go to:
             {airlines}
             <p>{to}</p>
