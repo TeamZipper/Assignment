@@ -7,7 +7,7 @@
  *
  * @author jim & andrew
  */
-class FleetData extends CI_Model
+class Fleetdata extends CI_Model
 {
 	// expressed using long-form array notaiton in case students use PHP 5.x
 	var $data = array(
