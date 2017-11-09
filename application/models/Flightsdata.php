@@ -1,6 +1,6 @@
 <?php
 
-class FlightsData extends CI_Model
+class Flightsdata extends CI_Model
 {
 	// expressed using long-form array notaiton in case students use PHP 5.x
 	var $data = array(
