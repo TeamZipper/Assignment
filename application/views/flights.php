@@ -80,7 +80,7 @@
         <tbody>
         {airlines}
         <tr>
-            <td><a href="/info/show/{key}" title="Status: {status}">{flight}</a></td>
+            <td><a href="/info/show/{flight}" title="Status: {status}">{flight}</a></td>
             <td>{scheduled}</td>
             <td>{estimated}</td>
             <td>{airline}</td>

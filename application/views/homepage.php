@@ -1,18 +1,20 @@
 <div class="row">
-	<div class="span4">
-            
-            <p>
-                # of planes: 
-              <?php echo  count($planes); ?>
-            </p>
-            
-            <p>
-                # flights:
-                <?php echo  count($airlines); ?>
-            </p>
-             airports we go to:
-            {airlines}
-            <p>{to}</p>
-            {/airlines}
-	</div>
+    <div class="span4">
+
+        <p>
+            # of planes: 
+            {planeCount}
+        </p>
+
+        <p>
+            # flights:
+            {flightCount}
+        </p>
+        airports we go to:
+        <ul>
+            {flights}
+            <li>{to}</li>
+            {/flights}
+        </ul>
+    </div>
 </div>
