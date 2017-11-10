@@ -14,18 +14,15 @@ class Welcome extends Application {
     public function index() {
         // this is the view we want shown
         $this->data['pagebody'] = 'homepage';
-
-        // build the list of planes, to pass on to our view
-        $source = $this->fleetdata->all();
            
-         // pass on the data to present, as the "plnaes" view parameter
-        $this->data['planes'] = $source;
-        
-        // build the list of flights, to pass on to our view
-        $source = $this->flightsdata->all();
+         // pass on the data to present, as the "planes" view parameter
+        $planes = $this->data['planes'] = $this->fleetdata->all();
 
         // pass on the data to present, as the "airlines" view parameter
-        $this->data['airlines'] = $source;
+        $flights = $this->data['flights'] = $this->flightsdata->all();
+        
+        $this->data['planeCount'] = count($planes);
+        $this->data['flightCount'] = count($flights);
 
         $this->render();
     }
