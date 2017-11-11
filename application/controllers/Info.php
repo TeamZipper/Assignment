@@ -1,19 +1,17 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Info extends Application
-{
+class Info extends Application {
 
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
     }
 
     /**
      * Flights listing page for our app
      */
-    public function index()
-    {
+    public function index() {
         // this is the view we want shown
         $this->data['pagebody'] = 'info';
 
@@ -26,8 +24,7 @@ class Info extends Application
         $this->render();
     }
 
-    public function show($key)
-    {
+    public function show($key) {
         // this is the view we want shown
         $this->data['pagebody'] = 'info';
 
@@ -35,8 +32,9 @@ class Info extends Application
         $source = $this->flightsdata->get($key);
 
         // pass on the data to present, adding the author record's fields
-        $this->data = array_merge($this->data, (array)$source);
+        $this->data = array_merge($this->data, (array) $source);
 
         $this->render();
     }
+
 }
