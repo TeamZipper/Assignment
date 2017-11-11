@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="span4">
-            Plane name: {id} <br>
+            Plane name: {name} <br>
             Manufacturer: {manufacturer} <br>
             Model: {model} <br>
             Price: {price} <br>
