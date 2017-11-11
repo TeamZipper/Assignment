@@ -20,7 +20,6 @@ class Flights extends Application {
 
         // pass on the data to present, as the "planes" view parameter
         $this->data['airlines'] = $source;
-
         $this->render();
     }
 
