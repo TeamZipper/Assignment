@@ -1,7 +1,7 @@
 <?php
 
-require_once 'C:\xampp\htdocs\4711Assn\Assignment\application\models\Plane.php';
-require_once 'C:\xampp\htdocs\4711Assn\Assignment\application\models\Dbaccess.php';
+require_once(__DIR__.'\Plane.php');
+require_once(__DIR__.'\Dbaccess.php');
 
 /**
  * 
