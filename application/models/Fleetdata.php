@@ -1,27 +1,43 @@
 <?php
 
+require_once 'C:\xampp\htdocs\4711Assn\Assignment\application\models\Plane.php';
+require_once 'C:\xampp\htdocs\4711Assn\Assignment\application\models\Dbaccess.php';
+
 /**
- * This is a "CMS" model for Fleet, but with bogus hard-coded data,
- * so that we don't have to worry about any database setup.
- * This would be considered a "mock database" model.
- *
- * @author jim & andrew
+ * 
+ * @author Andrew
  */
 class Fleetdata extends CSV_Model {
+
+    private $planes;
 
     // Constructor
     public function __construct() {
         parent::__construct(APPPATH . '../data/fleetdata.csv', 'id');
+        $this->planes = array();
 
-        // inject each "record" key into the record itself, for ease of presentation
-        /*foreach ($this->data as $key => $record) {
-            $record['key'] = $key;
-            $this->data[$key] = $record;
-        }*/
+        foreach ($this->_data as $entry)
+            $this->planes[] = new Plane($entry->name, $entry->id);
     }
 
-    // retrieve a single quote, null if not found
+    // retrieve a single plane, null if not found
     public function getPlane($which) {
-        return (array)$this->get($which);
+        $db = new DBAccess();
+
+        foreach ($db->getAirplanes() as $plane)
+            if ($plane["id"] === $this->planes[$which]->getName())
+                return $plane;
+
+        return null;
     }
+
+    public function allPlanes() {
+        $output = array();
+
+        for ($i = 0; $i < 2; $i++)
+            $output[] = array_merge($this->getPlane($i), array("key" => $i));
+        
+        return $output;
+    }
+
 }
