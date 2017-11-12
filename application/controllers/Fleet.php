@@ -17,7 +17,7 @@ class Fleet extends Application {
 
         // pass on the data to present, as the "planes" view parameter
         $this->data['planes'] = $this->fleetdata->allPlanes();
-
+        
         $this->render();
     }
 
