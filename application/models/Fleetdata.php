@@ -1,7 +1,7 @@
 <?php
 
-require_once(__DIR__.'\Plane.php');
-require_once(__DIR__.'\Dbaccess.php');
+require_once(__DIR__.'/Plane.php');
+require_once(__DIR__.'/Dbaccess.php');
 
 /**
  * 
