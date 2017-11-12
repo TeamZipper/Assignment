@@ -2,6 +2,10 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Fleet.
+ * The controller that builds the fleet page
+ */
 class Fleet extends Application {
 
     function __construct() {
