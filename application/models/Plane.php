@@ -1,6 +1,6 @@
 <?php
 
-require_once 'C:\xampp\htdocs\4711Assn\Assignment\application\models\Entity.php';
+require_once(__DIR__.'/Entity.php');
 
 /**
  * Description of Plane
@@ -12,10 +12,10 @@ class Plane extends Entity {
     private $name,
             $id;
 
-    function __construct($name, $id) {
+    /*function __construct($name, $id) {
         $this->setName($name);
         $this->setId($id);
-    }
+    }*/
 
     function setName($name) {
         if (is_string($name))
