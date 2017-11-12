@@ -15,18 +15,14 @@ class Fleet extends Application {
         // this is the view we want shown
         $this->data['pagebody'] = 'fleet';
 
-        // build the list of planes, to pass on to our view
-        $source = $this->fleetdata->all();
-
         // pass on the data to present, as the "planes" view parameter
-        $this->data['planes'] = $source;
+        $this->data['planes'] = $this->fleetdata->allPlanes();
 
         $this->render();
     }
 
     /**
-     * Show just one actor.
-     * Moved here to make it easy to implement other controllers
+     * Show just one plane.
      */
     public function show($key) {
         // this is the view we want shown
@@ -37,7 +33,7 @@ class Fleet extends Application {
 
         // pass on the data to present, adding the author record's fields
         $this->data = array_merge($this->data, (array) $source);
-
+        
         $this->render();
     }
 
