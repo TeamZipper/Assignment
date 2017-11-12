@@ -1,9 +1,9 @@
 <div class="row">
     {planes}
 	<div class="span4">
-		<a href="/fleet/show/{key}">
+		<a href="/fleet/show/{id}">
                     <p> 
-                             Plane: {id}
+                             Plane: {name}
                         <br> Manufacturer: {manufacturer}
                     </p>
 		</a>
