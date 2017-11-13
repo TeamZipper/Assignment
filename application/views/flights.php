@@ -61,18 +61,19 @@
         color:#fff;
     }
 </style>
-
 <div id="container">
     <table class="zebra">
         <caption>Current Airlines Information</caption>
         <thead>
         <tr>
-            <th>Flight</th>
-            <th>Scheduled time</th>
-            <th>Estimated time</th>
+            <th>Id</th>
+            <th>Airport</th>
+            <th>Fleet</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
             <th>Airline</th>
-            <th>To</th>
-            <th>Terminal</th>
+            <th>Departure</th>
+            <th>Destination</th>
             <th>Gate</th>
         <!--    <th>Status</th> -->
         </tr>
@@ -80,12 +81,14 @@
         <tbody>
         {airlines}
         <tr>
-            <td><a href="/info/show/{flight}" title="Status: {status}">{flight}</a></td>
-            <td>{scheduled}</td>
-            <td>{estimated}</td>
+            <td><a href="/info/show/{id}">{id}</a></td>
+            <td>{airport}</td>
+            <td>{fleet}</td>
+            <td>{departuretime}</td>
+            <td>{arrivaltime}</td>
             <td>{airline}</td>
-            <td>{to}</td>
-            <td>{terminal}</td>
+            <td>{departure}</td>
+            <td>{destination}</td>
             <td>{gate}</td>
         </tr>
         {/airlines}

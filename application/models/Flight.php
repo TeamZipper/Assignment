@@ -11,48 +11,54 @@
  *
  * @author Andrew
  */
+id,airport,fleet,departuretime,arrivaltime,airline,departure,destination,gate
+
 class Flight extends Entity {
-    private $flight,
-            $scheduled,
-            $estimated,
+    private $id,
+            $airport,
+            $fleet,
+            $departuretime,
+            $arrivaltime,
             $airline,
-            $to,
-            $terminal,
-            $gate,
-            $status;
+            $departure,
+            $destination,
+            $gate;
     
-    function setFlight($flight) {
-        $this->flight = $flight;
+    function setId($id) {
+        $this->id = $id;
     }
 
-    function setScheduled($scheduled) {
-        $this->scheduled = $scheduled;
+    function setAirport($airport) {
+        $this->airport = $airport;
     }
 
-    function setEstimated($estimated) {
-        $this->estimated = $estimated;
+    function setFleet($fleet) {
+        $this->fleet = $fleet;
+    }
+
+    function setDepartureTime($departuretime) {
+        $this->departuretime = $departuretime;
+    }
+
+    function setArrivalTime($arrivaltime) {
+        $this->arrivaltime = $arrivaltime;
     }
 
     function setAirline($airline) {
         $this->airline = $airline;
     }
 
-    function setTo($to) {
-        $this->to = $to;
+    function setDeparture($departure) {
+        $this->departure = $departure;
     }
 
-    function setTerminal($terminal) {
-        $this->terminal = $terminal;
+    function setDestination($destination) {
+        $this->destination = $destination;
     }
 
-    function setGate($gate) {
+    function setGate($gate){
         $this->gate = $gate;
     }
-
-    function setStatus($status) {
-        $this->status = $status;
-    }
-
         public function getFlight()
     {
         return $this->flight;
