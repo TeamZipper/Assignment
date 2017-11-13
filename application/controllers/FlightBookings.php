@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -8,13 +8,13 @@
 
 
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Flightbookings extends Application
-{
+
+class Flightbookings extends Application {
+
     /**
      * Loads some info about the app
      */
-    public function index()
-    {
+    public function index() {
 //        $this->load->model('airports');
 //        $this->load->model('flights');
 //        $this->data['airports'] = $this->airports->all();
@@ -24,21 +24,30 @@ class Flightbookings extends Application
         $this->data['pagebody'] = 'flightbookings';
         $this->render();
     }
-    public function matchFlights()
-    {
+
+    public function matchFlights() {
         $data = $this->input->post();
         $departure = $data['departureAirport'];
         $arrival = $data['arrivalAirport1'];
         $this->load->model('Dbaccess');
-        $flights = $this->Dbaccess->getAirports();
-        $matches = array();
-        if($departure != $arraival){
-            foreach(flights as $flight) {
-                if($flight->departureAirport == $departure) {
-                    
-                }
+        $this->load->model('flightsdata');
+        $flights = $this->flightsdata->getAll();
+        foreach ($flights as $flight) {
+            if ($flight->id == $departure && $flight->arrivalid == $arrival) {
+                $this->data['airport'] = $flight->airport;
+                $this->data['departuretime'] = $flight->departuretime;
+                $this->data['destination'] = $flight->destination;
+                $this->data['arrivaltime'] = $flight->arrivaltime;
             }
         }
+//        $matches = array();
+//        if($departure != $arraival){
+//            foreach($flights as $flight) {
+//                if($flight->departureAirport == $departure) {
+//                    
+//                }
+//            }
+//        }
         $this->data['pagebody'] = 'flightoptions';
         $this->render();
 //        $this->load->model('flights');
@@ -72,4 +81,5 @@ class Flightbookings extends Application
 //        header('Content-Type: application/json');
 //        echo json_encode($matches);
     }
+
 }

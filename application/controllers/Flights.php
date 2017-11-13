@@ -46,7 +46,7 @@ class Flights extends Application {
         $this->data['pagebody'] = 'info';
 
         // build the list of planes, to pass on to our view
-        $source = $this->flightsdata->getFlight($key);
+        $source = $this->flightsdata->getId($key);
 
         // pass on the data to present, adding the author record's fields
         $this->data = array_merge($this->data, (array)$source);

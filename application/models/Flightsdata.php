@@ -4,7 +4,7 @@ class Flightsdata extends CSV_Model {
 
     // Constructor
     public function __construct() {
-        parent::__construct(APPPATH . '../data/flightsdata.csv', 'flight');
+        parent::__construct(APPPATH . '../data/flightsdata.csv', 'id');
     }
 
     // retrieve a single quote, null if not found
@@ -13,5 +13,9 @@ class Flightsdata extends CSV_Model {
             $flights[] = (array) $flight;
         }
         return $flights[$which];
+    }
+    
+    public function getAll(){
+        return $this->all();
     }
 }
