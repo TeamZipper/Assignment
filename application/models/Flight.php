@@ -29,7 +29,8 @@ class Flight extends Entity {
     }
 
     function setAirport($airport) {
-        $this->airport = $airport;
+        if (is_string($airport))
+            $this->airport = $airport;
     }
 
     function setFleet($fleet) {
