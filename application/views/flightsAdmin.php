@@ -75,7 +75,8 @@
             <th>To</th>
             <th>Terminal</th>
             <th>Gate</th>
-        <!--    <th>Status</th> -->
+            <th></th>
+            <!--    <th>Status</th> -->
         </tr>
         </thead>
         <tbody>
@@ -88,6 +89,7 @@
             <td>{to}</td>
             <td>{terminal}</td>
             <td>{gate}</td>
+            <td><a href="flights/edit/{flight}"><button class="btn">Edit</button></a><a href="flights/delete/{flight}"><button class="btn">Delete</button></a></td>
         </tr>
         {/airlines}
         </tbody>

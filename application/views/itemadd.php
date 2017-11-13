@@ -1,0 +1,1 @@
+<a href="/flights/add"><input type="button" class="btn" value="Add Schedule"/></a>

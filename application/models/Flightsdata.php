@@ -14,5 +14,4 @@ class Flightsdata extends CSV_Model {
         }
         return $flights[$which];
     }
-
 }
