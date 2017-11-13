@@ -33,6 +33,7 @@ Release Date: Nov 10, 2017
 -   fleetdata.csv
 -   flightdata.csv
 -   Added required libraries
+-   Added user roles
 
 ## Updated Components
 -   Contents loaded from DB, not mock data.
