@@ -29,6 +29,8 @@ class Fleet extends Application {
      * Show just one plane.
      */
     public function show($key) {
+        $role = $this->session->userdata('userrole');
+        $this->data['pagetitle'] = 'Fleets (' . $role . ')';
         // this is the view we want shown
         $this->data['pagebody'] = 'plane';
 
