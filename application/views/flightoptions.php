@@ -5,14 +5,16 @@
         <table class="table" id="flight-options">
             <thead>
             <tr>
-                <th>Option</th>
-                <th>Departure</th>
+                <th>Airport</th>
                 <th>Departure Time</th>
                 <th>Arrival</th>
                 <th>Arrival Time</th>
             </tr>
             <tr>
                 <td>{airport}</td>
+                <td>{departuretime}</td>
+                <td>{destination}</td>
+                <td>{arrivaltime}</td>
             </tr>
             </thead>
         </table>

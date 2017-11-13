@@ -13,7 +13,7 @@
         airports we go to:
         <ul>
             {flights}
-            <li>{to}</li>
+            <li>{airport}</li>
             {/flights}
         </ul>
     </div>
