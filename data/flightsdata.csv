@@ -1,4 +1,4 @@
 id,airport,fleet,departuretime,arrivaltime,airline,departure,destination,arrivalid,gate
-"YAZ","Long Beach Airport","3U8502","11:25","12:56","Tofino Airlines","Tofino","Courtenay","YCA","D53"
-"YCA","Courtenay AirPort","WS180","12:30","12:45","Courtenay Airlines","Courtenay","Campbell River","YBL","B27"
-"YBL","Campbell River Airport","AC114","13:00","14:15","Albatros Airline","Campbell River","Alert Bay","YAL","C44"
+"YVR","Vancouver International Airport","3U8502","11:25","12:56","Zipper Airline","Vancouver","Prince George Airport","YXS","D53"
+"YXS","Prince George Airport","WS180","12:30","12:45","Zipper Airline","Prince George","Prince Rupert Airport","YPR","B27"
+"ZMH","South Cariboo Regional Airport","AC114","13:00","14:15","Zipper Airline","South Cariboo","Vancouver","YVR","C44"
