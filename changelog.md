@@ -3,7 +3,12 @@
 Team membership:  *SL*(cpt), AB, PM, BH, BX  
 Team conventions: Markdown for changelog  
 Changelog format: [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
-## *Version 0.1.3*
+## *Version 0.1.4*
+
+Release Date: Nov 12, 2017
+
+## Updated Components
+-  Added proper testing for Planes entities, and for the fleet on a whole.
 
 Release Date: Nov 12, 2017
 

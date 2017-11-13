@@ -25,6 +25,7 @@ class Plane extends Entity {
      * @param type $id The id of this plane.
      */
     function __construct($name=null, $id=null) {
+        parent::__construct();
         $this->setName($name);
         $this->setId($id);
     }

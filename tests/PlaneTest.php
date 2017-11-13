@@ -1,34 +1,48 @@
 <?php
 
 /**
- * Description of PlaneTest
+ * Planetest.
+ * For testing the Plane entity model.
  *
  * @author Paul
  */
 class PlaneTest extends PHPUnit_Framework_TestCase {
     
+    // The plane on which tests will occur.
     private $plane;
 
+    /**
+     *  Initializes data.
+     */
     public function setUp() 
     {
         $this->plane = new Plane();
     }
 
+    /**
+     * Tests setter with valid data.
+     */
     public function testSetValid() 
     {
-        /*$name = $this->plane->setName("Do stuff");
-        $id = $this->plane->setId(1);
+        $validName = "heidi";
+        $validId = 22;
         
-        $this->assertEquals("Do stuff", $name);
-        $this->assertEquals(1, $id);*/
+        $name = $this->plane->setName($validName);
+        $id = $this->plane->setId($validId);
+        
+        $this->assertEquals($validName, $name);
+        $this->assertEquals($validId, $id);
     }
     
+    /**
+     *  Tests setter with invalid data.
+     */
     public function testSetInvalid()
     {
-        /*$name = $this->plane->setName("Do stuff");
-        $id = $this->plane->setId(1);
+        $invalidName = 16;
         
-        $this->assertNotEquals("Do stuff", $name);
-        $this->assertNotEquals(1, $id);*/
+        $name = $this->plane->setName($invalidName);
+        
+        $this->assertNotEquals($invalidName, $name);
     }
 }
