@@ -1,9 +1,20 @@
 <div class="row">
-    {authors}
-	<div class="span4">
-		<a href="/welcome/show/{key}">
-			<img src="/pix/{who}.jpg" title="{who} plays {role}"/>
-		</a>
-	</div>
-    {/authors}
+    <div class="span4">
+
+        <p>
+            # of planes: 
+            {planeCount}
+        </p>
+
+        <p>
+            # flights:
+            {flightCount}
+        </p>
+        airports we go to:
+        <ul>
+            {flights}
+            <li>{airport}</li>
+            {/flights}
+        </ul>
+    </div>
 </div>
