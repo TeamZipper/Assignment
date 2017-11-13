@@ -11,9 +11,8 @@
  *
  * @author Andrew
  */
-id,airport,fleet,departuretime,arrivaltime,airline,departure,destination,gate
-
 class Flight extends Entity {
+
     private $id,
             $airport,
             $fleet,
@@ -22,8 +21,9 @@ class Flight extends Entity {
             $airline,
             $departure,
             $destination,
+            $arrivalid,
             $gate;
-    
+
     function setId($id) {
         $this->id = $id;
     }
@@ -52,50 +52,56 @@ class Flight extends Entity {
         $this->departure = $departure;
     }
 
+    function setArrivalId($arrivalid) {
+        $this->arrivalid = $arrivalid;
+    }
+
     function setDestination($destination) {
         $this->destination = $destination;
     }
 
-    function setGate($gate){
+    function setGate($gate) {
         $this->gate = $gate;
     }
-        public function getFlight()
-    {
-        return $this->flight;
+
+    public function getId() {
+        return $this->id;
     }
-    
-    public function getScheduled()
-    {
-        return $this->scheduled;
+
+    public function getAirport() {
+        return $this->airport;
     }
-    
-    public function getEstimated()
-    {
-        return $this->estimated;
+
+    public function getFleet() {
+        return $this->fleet;
     }
-    
-    public function getAirline()
-    {
+
+    public function getDepartureTime() {
+        return $this->departuretime;
+    }
+
+    public function getArrivalTime() {
+        return $this->arrivaltime;
+    }
+
+    public function getAirline() {
         return $this->airline;
     }
-    
-    public function getTo()
-    {
-        return $this->to;
+
+    public function getDeparture() {
+        return $this->departure;
     }
-    
-    public function getTerminal()
-    {
-        return $this->terminal;
+
+    public function getDestination() {
+        return $this->destination;
     }
-    
-    public function getGate()
-    {
+
+    public function getArrivalId() {
+        return $this->arrivalid;
+    }
+
+    public function getGate() {
         return $this->gate;
     }
-    
-    public function getStatus()
-    {
-        return $this->status;
-    }
+
 }
