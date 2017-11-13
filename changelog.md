@@ -39,3 +39,10 @@ Release Date: Nov 10, 2017
 -   Contents loaded from DB, not mock data.
 -   Better separation of concerns on homepage.
 -   Improved listing in homepage.
+
+## New Components
+-   Change Controller Flights 
+-   Added view: flightAdmin: Admin view.
+-   Added view: addflights: Admin can edit flight page now.
+-   Added view: itemadd: Admin can add flights now.
+-   Added view: empty: Empty div

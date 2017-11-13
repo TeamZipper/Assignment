@@ -62,35 +62,34 @@
         color:#fff;
     }
 </style>
+
 <div id="container">
     <table class="zebra">
         <caption>Current Airlines Information</caption>
         <thead>
         <tr>
-            <th>Id</th>
-            <th>Airport</th>
-            <th>Fleet</th>
-            <th>Departure Time</th>
-            <th>Arrival Time</th>
+            <th>Flight</th>
+            <th>Scheduled time</th>
+            <th>Estimated time</th>
             <th>Airline</th>
-            <th>Departure</th>
-            <th>Destination</th>
+            <th>To</th>
+            <th>Terminal</th>
             <th>Gate</th>
-        <!--    <th>Status</th> -->
+            <th></th>
+            <!--    <th>Status</th> -->
         </tr>
         </thead>
         <tbody>
         {airlines}
         <tr>
-            <td><a href="/info/show/{id}">{id}</a></td>
-            <td>{airport}</td>
-            <td>{fleet}</td>
-            <td>{departuretime}</td>
-            <td>{arrivaltime}</td>
+            <td><a href="/info/show/{flight}" title="Status: {status}">{flight}</a></td>
+            <td>{scheduled}</td>
+            <td>{estimated}</td>
             <td>{airline}</td>
-            <td>{departure}</td>
-            <td>{destination}</td>
+            <td>{to}</td>
+            <td>{terminal}</td>
             <td>{gate}</td>
+            <td><a href="flights/edit/{flight}"><button class="btn">Edit</button></a><a href="flights/delete/{flight}"><button class="btn">Delete</button></a></td>
         </tr>
         {/airlines}
         </tbody>

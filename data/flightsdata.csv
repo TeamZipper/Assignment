@@ -1,4 +1,4 @@
-flight,scheduled,estimated,airline,to,terminal,gate,status
-"3U8502","11:25","12:56","Sichuan Airlines","Chengdu","Main","D53","Departed"
-"WS180","12:30","12:45","WestJet Airlines","Edmonton","Main","B27","Final Call"
-"AC114","13:00","","Air Canada","Toronto","Main","C44","Boarding"
+id,airport,fleet,departuretime,arrivaltime,airline,departure,destination,gate
+"YAZ","Long Beach Airport","3U8502","11:25","12:56","Tofino Airlines","Tofino","Courtenay","D53"
+"YCA","Courtenay AirPort","WS180","12:30","12:45","Courtenay Airlines","Courtenay","Campbell River","B27"
+"YBL","Campbell River Airport","AC114","13:00","14:15","Albatros Airline","Campbell River","Alert Bay","C44"
