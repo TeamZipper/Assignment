@@ -11,6 +11,17 @@ Release Date: Nov 12, 2017
 -  Added commenting to many of the models and controllers.
 -  Fixed some poorly made design choices.
 
+
+Release Date: Nov 12, 2017
+
+## New Components
+-   Added blank test files
+
+## Updated Components
+-   Autoloaded necessary classes
+-   Changed include paths from absolute to relative
+-   Commented out custom constructor in Plane.php
+
 Release Date: Nov 10, 2017
 
 ## New Components

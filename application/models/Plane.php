@@ -1,6 +1,6 @@
 <?php
 
-require_once 'C:\xampp\htdocs\4711Assn\Assignment\application\models\Entity.php';
+require_once(__DIR__.'/Entity.php');
 
 /**
  * Plane.
@@ -18,13 +18,13 @@ class Plane extends Entity {
     //          Only used for local identification.
     private $name,
             $id;
-
+    
     /**
      * 
      * @param string $name The name of this plane.
      * @param type $id The id of this plane.
      */
-    function __construct($name, $id) {
+    function __construct($name=null, $id=null) {
         $this->setName($name);
         $this->setId($id);
     }
