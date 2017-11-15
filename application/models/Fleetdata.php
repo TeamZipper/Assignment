@@ -13,7 +13,7 @@ class Fleetdata extends CSV_Model {
 
     // An array containing Plane entities.
     private $planes;
-
+ 
     /**
      * Constructor for Fleetdata.
      */
