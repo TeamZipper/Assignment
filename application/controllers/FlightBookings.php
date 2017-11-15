@@ -8,19 +8,17 @@
 
 
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+/*
+ * Flight booking page
+ */
 class Flightbookings extends Application {
 
     /**
      * Loads some info about the app
      */
     public function index() {
-//        $this->load->model('airports');
-//        $this->load->model('flights');
-//        $this->data['airports'] = $this->airports->all();
-//        $this->data['flights'] = $this->flights->all(); 
-        $this->load->model('Dbaccess');
-        $this->data['airlines'] = $this->Dbaccess->getAirports();
+        $this->load->model('AirportData');
+        $this->data['airlines'] = $this->AirportData->getAll();
         $this->data['pagebody'] = 'flightbookings';
         $this->render();
     }
@@ -40,46 +38,8 @@ class Flightbookings extends Application {
                 $this->data['arrivaltime'] = $flight->arrivaltime;
             }
         }
-//        $matches = array();
-//        if($departure != $arraival){
-//            foreach($flights as $flight) {
-//                if($flight->departureAirport == $departure) {
-//                    
-//                }
-//            }
-//        }
         $this->data['pagebody'] = 'flightoptions';
         $this->render();
-//        $this->load->model('flights');
-//        $flights = $this->flights->all();
-//        $matches = array();
-//        if($departure != $arrival) {
-//            foreach($flights as $flight) {
-//                if($flight->departureAirport == $departure) {
-//                    if($flight->arrivalAirport == $arrival) {
-//                        array_push($matches, array($flight)); //direct flight
-//                    } else {
-//                        foreach($flights as $flight2) {
-//                            if($flight2->departureAirport == $flight->arrivalAirport) {
-//                                if($flight2->arrivalAirport == $arrival) {
-//                                    array_push($matches, array($flight, $flight2)); //check one stop
-//                                } else {
-//                                    foreach($flights as $flight3) {
-//                                        if($flight3->departureAirport == $flight2->arrivalAirport && $flight2->arrivalAirport != $departure) {
-//                                            if($flight3->arrivalAirport == $arrival) {
-//                                                array_push($matches, array($flight, $flight2, $flight3));
-//                                            }
-//                                        }
-//                                    }
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//        header('Content-Type: application/json');
-//        echo json_encode($matches);
     }
 
 }
