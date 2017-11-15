@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Flight booking page
  */
 
-class Flightbookings extends Application {
+class FlightBookings extends Application {
 
     function __construct() {
         parent::__construct();
