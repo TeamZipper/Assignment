@@ -22,9 +22,10 @@ class FlightBookings extends Application {
      * Loads some info about the app
      */
     public function index() {
+        $this->data['pagebody'] = 'flightbookings';
+
         $this->load->model('AirportData');
         $this->data['airlines'] = $this->AirportData->getAll();
-        $this->data['pagebody'] = 'flightbookings';
         $this->render();
     }
 
