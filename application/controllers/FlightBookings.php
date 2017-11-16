@@ -19,7 +19,7 @@ class FlightBookings extends Application {
     }
 
     /**
-     * Loads some info about the app
+     * Loads some info about the Flightbookings
      */
     public function index() {
         $this->data['pagebody'] = 'flightbookings';
