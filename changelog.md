@@ -8,6 +8,11 @@ Changelog format: [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdo
 Release Date: Nov 12, 2017
 
 ## Updated Components
+-  Added flight tests
+
+Release Date: Nov 12, 2017
+
+## Updated Components
 -  Added proper testing for Planes entities, and for the fleet on a whole.
 
 Release Date: Nov 12, 2017
