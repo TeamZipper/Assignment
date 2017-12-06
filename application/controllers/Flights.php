@@ -33,7 +33,7 @@ class Flights extends Application {
             // this is the view we want shown
             $this->data['pagebody'] = 'flights';
             // build the list of planes, to pass on to our view
-            $source = $this->flightsdata->all();
+            $source = $this->flightsdata->allFlights();
             // pass on the data to present, as the "planes" view parameter
             $this->data['airlines'] = $source;
             $this->render();
