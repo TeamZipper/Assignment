@@ -32,16 +32,16 @@ class Flightbookings extends Application {
     public function matchFlights() {
         $data = $this->input->post();
         $departure = $data['departureAirport'];
-        $arrival = $data['arrivalAirport1'];
+        $arrival = $data['arrivalAirport'];
         $this->load->model('Dbaccess');
         $this->load->model('flightsdata');
-        $flights = $this->flightsdata->getAll();
+        $flights = $this->flightsdata->allFlights();
         foreach ($flights as $flight) {
-            if ($flight->id == $departure && $flight->arrivalid == $arrival) {
-                $this->data['airport'] = $flight->airport;
-                $this->data['departuretime'] = $flight->departuretime;
-                $this->data['destination'] = $flight->destination;
-                $this->data['arrivaltime'] = $flight->arrivaltime;
+            if ($flight['deptId'] === $departure && $flight['arrId'] === $arrival) {
+                $this->data['airport'] = $flight['deptPort'];
+                $this->data['departuretime'] = $flight['deptTime'];
+                $this->data['destination'] = $flight['arrPort'];
+                $this->data['arrivaltime'] = $flight['arrTime'];
             }
         }
         $this->data['pagebody'] = 'flightoptions';
