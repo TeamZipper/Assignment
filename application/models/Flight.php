@@ -14,95 +14,67 @@
 class Flight extends Entity {
 
     private $id,
-            $airport,
-            $fleet,
+            $airplane,
             $departuretime,
             $arrivaltime,
-            $airline,
-            $departure,
             $destination,
-            $arrivalid,
-            $gate;
+            $origin;
 
-    function setId($id) {
+    public function __construct($id=null, $airplane=null, $departuretime=null, $arrivaltime=null, $destination=null, $origin=null) {
+        parent::__construct();
         $this->id = $id;
-    }
-
-    function setAirport($airport) {
-        if (is_string($airport))
-            $this->airport = $airport;
-    }
-
-    function setFleet($fleet) {
-        $this->fleet = $fleet;
-    }
-
-    function setDepartureTime($departuretime) {
+        $this->airplane = $airplane;
         $this->departuretime = $departuretime;
-    }
-
-    function setArrivalTime($arrivaltime) {
         $this->arrivaltime = $arrivaltime;
-    }
-
-    function setAirline($airline) {
-        $this->airline = $airline;
-    }
-
-    function setDeparture($departure) {
-        $this->departure = $departure;
-    }
-
-    function setArrivalId($arrivalid) {
-        $this->arrivalid = $arrivalid;
-    }
-
-    function setDestination($destination) {
         $this->destination = $destination;
-    }
-
-    function setGate($gate) {
-        $this->gate = $gate;
+        $this->origin = $origin;
     }
 
     public function getId() {
         return $this->id;
     }
 
-    public function getAirport() {
-        return $this->airport;
+    public function getAirplane() {
+        return $this->airplane;
     }
 
-    public function getFleet() {
-        return $this->fleet;
-    }
-
-    public function getDepartureTime() {
+    public function getDeparturetime() {
         return $this->departuretime;
     }
 
-    public function getArrivalTime() {
+    public function getArrivaltime() {
         return $this->arrivaltime;
-    }
-
-    public function getAirline() {
-        return $this->airline;
-    }
-
-    public function getDeparture() {
-        return $this->departure;
     }
 
     public function getDestination() {
         return $this->destination;
     }
 
-    public function getArrivalId() {
-        return $this->arrivalid;
+    public function getOrigin() {
+        return $this->origin;
     }
 
-    public function getGate() {
-        return $this->gate;
+    public function setId($id) {
+        $this->id = $id;
     }
 
+    public function setAirplane($airplane) {
+        $this->airplane = $airplane;
+    }
+
+    public function setDeparturetime($departuretime) {
+        $this->departuretime = $departuretime;
+    }
+
+    public function setArrivaltime($arrivaltime) {
+        $this->arrivaltime = $arrivaltime;
+    }
+
+    public function setDestination($destination) {
+        $this->destination = $destination;
+    }
+
+    public function setOrigin($origin) {
+        $this->origin = $origin;
+    }
 }
