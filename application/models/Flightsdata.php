@@ -40,7 +40,9 @@ class Flightsdata extends CSV_Model {
                      'arrCity'=>$dest["community"],
                      'deptTime'=>$this->flights[$which]->getDeparturetime(),
                      'arrTime'=>$this->flights[$which]->getArrivaltime(),
-                     'airplane'=>$plane["model"]);
+                     'airplane'=>$plane["model"],
+                     'deptId'=>$origin["id"],
+                     'arrId'=>$dest["id"]);
         
     }
     
@@ -51,5 +53,6 @@ class Flightsdata extends CSV_Model {
         for ($i = 0; $i < count($this->flights); $i++)
             $output[] = array_merge($this->getFlight($i), array("key" => $i));
         
-        return $output;    }
+        return $output;            
+    }
 }

@@ -15,7 +15,7 @@ class Flights extends Application {
     public function index() {
         // get user role information
         $role = $this->session->userdata('userrole');
-        $this->data['flights'] = $this->flightsdata->all();
+        $this->data['flights'] = $this->flightsdata->allFlights();
         $this->data['pagetitle'] = 'Scheduled Flights ('. $role . ')';
         $this->data['pagebody'] = 'flights';
         //  if user role is owner
