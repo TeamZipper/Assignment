@@ -11,15 +11,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /*
  * Flight booking page
  */
+
 class Flightbookings extends Application {
 
+    function __construct() {
+        parent::__construct();
+    }
+
     /**
-     * Loads some info about the app
+     * Loads some info about the Flightbookings
      */
     public function index() {
+        $this->data['pagebody'] = 'flightbookings';
+
         $this->load->model('AirportData');
         $this->data['airlines'] = $this->AirportData->getAll();
-        $this->data['pagebody'] = 'flightbookings';
         $this->render();
     }
 
