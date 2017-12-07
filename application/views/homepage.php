@@ -12,9 +12,9 @@
         </p>
         airports we go to:
         <ul>
-            {flights}
-            <li>{airport}</li>
-            {/flights}
+            {airports}
+            <li>{id}</li>
+            {/airports}
         </ul>
     </div>
 </div>

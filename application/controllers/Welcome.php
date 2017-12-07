@@ -19,22 +19,30 @@ class Welcome extends Application {
         $planes = $this->data['planes'] = $this->fleetdata->all();
 
         // pass on the data to present, as the "airlines" view parameter
-        $flights = $this->data['airports'] = $this->ourAirlines();
+        $airports = $this->data['airports'] = $this->ourAirlines();
         
         $this->data['planeCount'] = count($planes);
-        $this->data['flightCount'] = count($flights);
+        $this->data['flightCount'] = count($airports);
 
         $this->render();
     }
 
     
     private function ourAirlines() {
-        $this->load->model['Dbaccess'];
+        $this->load->model('Dbaccess');
         $all = $this->Dbaccess->getAirlines();
+        $outputUnconverted; 
+        $output = array();
         
         foreach ($all as $an)
             if ($an['id'] === 'zipper')
-                return $an;
+                $outputUnconverted = $an;
+        
+        foreach ($outputUnconverted as $bad => $good)
+            if ($bad != 'id')
+                $output[] = array('id' => $good);
+        
+        return $output;
     }
     
     public function show($key) {
