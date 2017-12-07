@@ -24,7 +24,7 @@ class Flights extends Application {
             // this is the view we want shown
             $this->data['pagebody'] = 'flightsAdmin';
             // build the list of planes, to pass on to our view
-            $source = $this->flightsdata->all();
+            $source = $this->flightsdata->allFlights();
             $this->data['airlines'] = $source;
             $this->render();
         } else {

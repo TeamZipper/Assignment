@@ -68,30 +68,52 @@
         <caption>Current Airlines Information</caption>
         <thead>
         <tr>
-            <th>Id</th>
-            <th>Airport</th>
-            <th>Fleet</th>
-            <th>Departure Time</th>
-            <th>Arrival Time</th>
-            <th>Airline</th>
-            <th>Departure</th>
-            <th>Destination</th>
-            <th>Gate</th>
+            <th>
+                Departure Airport
+            </th>
+            <th>
+                Departure City
+            </th>
+            <th>
+                Arrival Airport
+            </th>
+            <th>
+                Arrival City
+            </th>
+            <th>
+                Departure Time  
+            </th>
+            <th>
+                Arrival Time
+            </th>
+            <th>
+                Airplane
+            </th>
             <th></th>
         </tr>
         </thead>
         <tbody>
         {airlines}
         <tr>
-            <td><a href="/info/show/{id}">{id}</a></td>
-            <td>{airport}</td>
-            <td>{fleet}</td>
-            <td>{departuretime}</td>
-            <td>{arrivaltime}</td>
-            <td>{airline}</td>
-            <td>{departure}</td>
-            <td>{destination}</td>
-            <td>{gate}</td>
+            <td><a href="/info/show/{deptPort}">{deptPort}</a></td>
+            <td>
+                {deptCity}
+            </td>
+            <td>
+                {arrPort}
+            </td>
+            <td>
+                {arrCity}
+            </td>
+            <td>
+                {deptTime}
+            </td>
+            <td>
+                {arrTime}
+            </td>
+            <td>
+                {airplane}
+            </td>
             <td><a href="flights/edit/{flight}"><button class="btn">Edit</button></a><a href="flights/delete/{flight}"><button class="btn">Delete</button></a></td>
         </tr>
         {/airlines}
